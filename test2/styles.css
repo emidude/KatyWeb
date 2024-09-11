@@ -1,0 +1,102 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Ensure horizontal layout on large screens */
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+/* Burger Menu */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Media Queries for Tablets and Phones */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hidden initially on small screens */
+        flex-direction: column; /* Vertical layout on small screens */
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: auto; /* Auto width to fit content */
+        min-width: 150px; /* Minimum width to maintain usability */
+        padding: 10px; /* Reduced padding */
+        box-sizing: content-box; /* Ensure padding doesn't affect width */
+        z-index: 100;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Vertical alignment for small screens */
+    }
+
+    .burger {
+        display: flex; /* Show burger icon on small screens */
+    }
+}
+
+/* Show menu when the burger is clicked */
+.menu.show ul {
+    display: flex;
+    flex-direction: column; /* Vertical layout for small screens when burger menu is open */
+}
+
+/* Section styles */
+section {
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin: 20px;
+}
+
+@media (max-width: 600px) {
+    section {
+        margin: 10px;
+    }
+}
